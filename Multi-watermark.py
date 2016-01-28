@@ -14,6 +14,9 @@ sys.stdout.write("\b" * (toolbar_width+1))
 # sets opacity of the water mark
 opacity = 1
 amount = 50
+# Change this variable to adjust the amount that the watermark steps
+# accross the image
+step = 50
 # selecting the file that is a jpeg amoung other files
 img_file = files[img_location]
 # Splitting the file into file name and extension name
@@ -31,7 +34,7 @@ d = ImageDraw.Draw(txt)
 # Loop that creates each unique photo
 position = 0
 for i in range(amount):
-    position += 100
+    position += step
     d.text((position,10), "SaveMyServer", font=fnt, fill=(0,0,0,opacity))
     out = Image.alpha_composite(base, txt)
     out.save(name + "-watermarked-" + str(i + 1)+ "." + extension)
