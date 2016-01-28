@@ -1,7 +1,7 @@
 #This script will make the directorys for the photos
 import os, shutil, sys
 
-source = os.path.abspath('../SCRIPTS/Multi-watermark.py')
+source = os.path.abspath('../SCRIPTS/Multi_watermark.py')
 print source
 
 def userInput():
